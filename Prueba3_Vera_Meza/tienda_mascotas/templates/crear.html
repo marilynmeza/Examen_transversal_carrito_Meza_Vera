@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creando Productos</title>
+    {% load static %}
+    <!-- LIBRERIAS PARA VALIDAR  -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+
+
+    <script>
+        /*--crearemos nuestro jquery llamando a los id creados en el form */$
+
+        $(function(){
+            /*invocaremos al id del formulario creado en este mismo html*/
+            $("#formulario").validate({
+                 //cargamos reglas, con los id, y vemos los atributos que necesitamos
+                 //que sean obligatorios
+                rules:{                     
+
+                    idProducto:"required",
+                    marca:"required",
+                    precioProducto:"required",
+                    stock:"required",
+                    categoria:"required",
+
+                },
+                //agregamos mensajes para alertar en campos obligatorios
+                messages:{
+
+                    idProducto:{
+                        required:'Ingrese un ID para el producto',
+                    },
+                    marca:{
+                        required:'Ingrese la marca del producto',
+                    },
+                    precioProducto:{
+                        required:'Ingrese el precio del producto',
+                    },
+                    stock:{
+                        required:'Ingrese el stock del producto',
+                    },
+                    categoria:{
+                        required:'Seleccione la categoria del producto',
+                    },
+
+
+                }                                
+            })
+        });
+        
+
+
+
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Creando Productos</h2>
+        <form method="POST" id="formulario" enctype="multipart/form-data">
+            <!-- atributo que PERMITE CARGAR ARCHIVOS A UN FORMULARIO enctype="multipart/form-data" -->
+            <!-- directiva para que reconozoca el templed django, es por seguridad -->
+           <!-- este token controla la seguridad de los datos -->
+            {% csrf_token %}
+            <!-- class row x cada atributo FILA -->
+            <div class="row">
+                <label for="{{ productoform.field.name }}">
+                    {{ productoform.idProducto.label }}
+                </label>
+                {{ productoform.idProducto }}
+            </div>
+
+            <div class="row">
+                 <!--  ENTRE LLAVES DEBE IR : 
+                    nombre del  que le dimos al diccionario en metodo modificar en VIEWS (productoform) . ATRIBUTO}} -->
+                <label for="{{ productoform.field.name }}">
+                    {{ productoform.marca.label }}
+                </label>
+                <!--  ENTRE LLAVES DEBE IR : 
+                    nombre del  que le dimos al diccionario en metodo modificar en VIEWS (productoform) . ATRIBUTO}} -->
+                {{ productoform.marca }}
+            </div>
+
+            <div class="row">
+                <label for="{{ productoform.field.name }}">
+                    {{ productoform.precioProducto.label }}
+                </label>
+                {{ productoform.precioProducto }}
+            </div>
+
+            <div class="row">
+                <label for="{{ productoform.field.name }}">
+                    {{ productoform.stock.label }}
+                </label>
+                {{ productoform.stock }}
+            </div>
+
+            <div class="row">
+                <label for="{{ productoform.field.name }}">
+                    {{ productoform.categoria.label }}
+                </label>
+                {{ productoform.categoria }}
+            </div>
+
+            <div class="row">
+                <label for="{{ productoform.field.name }}">
+                    {{ productoform.imagen.label }}
+                </label>
+                {{ productoform.imagen }}
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-md">
+                {% if user.is_authenticated %}
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                {% else %}
+                    <td><a href="#" class="btn btn-outline-secondary"> DEBE LOGGEARSE </a></td>
+                {% endif %}
+                    
+                    <br>
+                    <br>
+                    <br>
+
+                    <a href="{% url 'inicio' %}" class="btn btn-success">Inicio</a>
+
+                </div>
+            </div>
+            
+            
+        </form>
+
+    </div>
+</body>
+</html>

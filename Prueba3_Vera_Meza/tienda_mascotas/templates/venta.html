@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estiloTarjeta.css'%}">
+   
+    
+    <title>ventas</title>
+</head>
+<body>
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/bandaPerro11.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Bandana estandar </h4>
+                        <p class="card-text">
+                        $2190 clp   
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/bandanaPerro21.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">bandana estandar </h4>
+                        <p class="card-text">
+                         $ 1990 clp
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/bandanaPerro31.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Bandana estandar</h4>
+                        <p class="card-text">
+                         $1780 clp  
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/entificacion21.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Identificación</h4>
+                        <p class="card-text">
+                        $ 900 clp 
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+           
+           
+            
+
+        </div><!--row-->
+
+    </div><!--container-fluid-->
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/correaperro11.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Correa cuero</h4>
+                        <p class="card-text">
+                        $ 4790 clp   
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/correaperro21.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Correa retractil</h4>
+                        <p class="card-text">
+                        $ 7490 clp 
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/correaperro31.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Correa</h4>
+                        <p class="card-text">
+                        $ 3250 clp    
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/identificacion11.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Identificacion</h4>
+                        <p class="card-text">
+                        $ 2450 clp 
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+           
+           
+            
+
+        </div><!--row-->
+
+    </div><!--container-fluid-->
+
+    <br>
+    <br>
+
+
+    <!-- <footer>
+        <div class="row col-12">
+            <div class="col-lg-2">
+                <img src=" {% static 'img/logos/logomascota.jpg' %}" alt="logoPerrito" width="60px">
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'inicio' %}" id="linkFooter"><strong>INICIO</strong></a>
+            </div>
+            <div class="col-lg-1">
+                <strong>Fundacion</strong>
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'valida' %}" id="linkFooter"><strong>Formulario ayuda</strong></a>
+            </div>
+            <div class="col-lg-2">
+                <a href="https://www.fundacionanimal.cl/" id="linkFooter"><strong>Donar</strong></a>
+            </div>
+
+            <div class="col-lg-2">
+                <strong>Síguenos</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'img/logos/facebook (2).png' %}" alt="" width="30px" height="30px"style=" margin-left: 15px;" >
+                    <img src="{% static 'img/logos/twitter.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                    <img src="{% static 'img/logos/instagramblack.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <strong>Contacto</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'img/logos/ubicacion.png' %} " alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>Av. Esq. Blanca 501, Maipú</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'img/fono.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 10px;">
+                    <p>+56999118826</p>
+                    <img src="{% static 'img/fono.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 10px;">
+                    <p>+56987163669</p>
+                    <img src="{% static 'img/fono.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 10px;">
+                    <p>+56985444669</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'img/logos/correo.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 25px; margin-left: 10px;">
+                        <br>
+                    <p>est.vera@duocuc.cl</p>
+                    <img src="{% static 'img/logos/correo.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 25px; margin-left: 20px;">
+                        <br>
+                    <p>m.meza.vera@duocuc.cl</p>
+                    <img src="{% static 'img/logos/correo.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 25px; margin-left: 10px;">
+                    <p>max.veliz@duocuc.cl</p>
+                </div>
+                
+                <br><br><br>
+
+                <p>&copy; pet up - 2023</p>
+            </div>
+        </div>
+    </footer> -->
+
+
+
+    
+
+
+    
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>
+{%endblock%}

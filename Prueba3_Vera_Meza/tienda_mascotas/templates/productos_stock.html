@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+     <link href="{% static 'css/estilos.css' %}" rel="stylesheet"> 
+    <title>Productos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Productos</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id Producto</th>
+                    <th>Marca</th>
+                    <th>Precio</th>
+                    <th>Cantidad en Stock</th>
+                    <th>Categoria</th>
+                    <th>Imagenes</th>
+                    <th>Eliminar</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- recorrer coleccion -->
+                    <!-- for i in nombre coleccion -->
+                {% for producto in productitos %}
+                    
+                <!-- recorremos lista
+                i.parametro de nuestra clase -->
+                    <td> {{ producto.idProducto }}</td>
+                    <td> {{ producto.marca }}</td>
+                    <td> {{ producto.precioProducto }}</td>
+                    <td> {{ producto.stock }}</td>
+                    <td> {{ producto.categoria }}</td>
+                    {% if producto.imagen %}
+                        <td scope = "row"> 
+                            <img src="{{ producto.imagen.url }}" style="height: 50px; width: 50px;">
+                        </td>
+                    {% else %}
+                        <td>
+                            <p style="color: green;">NO EXISTE IMAGEN</p>
+                        </td>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <td><a href="{% url 'eliminar' producto.idProducto %}" class="btn btn-outline-danger">Eliminar
+                    {% else %}
+                        <td><a href="#" class="btn btn-outline-danger"> NO AUTORIZADO </a></td>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                        <td><a href="{% url 'modificar' producto.idProducto %}" class="btn btn-outline-info">Modificar
+                    {% else %}
+                        <td><a href="#" class="btn btn-outline-secondary"> DEBE LOGGEARSE </a></td>
+                    {% endif %}
+                    </a></td>
+                 </tr>
+
+                 <!-- termina el ciclo FOR -->
+                 {% endfor %}
+            </tbody>
+
+        </table>
+        <!-- va a ser metodo para creacion nuevo objecto y almacenar en backend (similar al insert) -->
+        <!-- no agregamos aún hrref xk no hemos realizado nada en path  -->
+        <!-- botón debe llamar a un nuevo template -->
+        {% if user.is_authenticated %}
+        <a href="{% url 'crear' %}" class="btn btn-success">Crear Producto</a>
+        {% else %}
+        <td><a href="#" class="btn btn-success">No logeado</a></td>
+        {% endif %}        
+                 <br>
+                    <br>
+                    <br>
+
+                    <a href="{% url 'inicio' %}" class="btn btn-secondary">Inicio</a>
+
+    </div>
+    
+</body>
+</html>
+{%endblock%}

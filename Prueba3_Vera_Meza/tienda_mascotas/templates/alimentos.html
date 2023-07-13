@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estiloTarjeta.css'%}">
+    
+    <title>ventas</title>
+</head>
+<body>
+   
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/alimentos/alimentoraza.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Raza 21 kg</h4>
+                        <p class="card-text">
+                        $35.000 clp   
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/alimentos/catshow.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Alimento gato 12 kg</h4>
+                        <p class="card-text">
+                         $ 19.900 clp
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/alimentos/alimentowagui.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Wagui adulto
+                            20 kg
+                        </h4>
+                        <p class="card-text">
+                         $27.800 clp  
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/alimentos/fitgato.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Fit formula gato 10 kg</h4>
+                        <p class="card-text">
+                        $ 29.000 clp 
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+           
+           
+            
+
+        </div><!--row-->
+
+    </div><!--container-fluid-->
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/alimentos/fitperro.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Fit adulto raza pequeña</h4>
+                        <p class="card-text">
+                        $ 37.900 clp   
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/alimentos/pedigri.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">pedigree cachorro  2 kg </h4>
+                        <p class="card-text">
+                        $ 18.900 clp 
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/alimentos/wiskas.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">wiskas 1.5 kg</h4>
+                        <p class="card-text">
+                        $ 16.250 clp    
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/alimentos/felix.jpg'%}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">felix 1.5 kg</h4>
+                        <p class="card-text">
+                        $ 14.500 clp 
+                        </p>
+                        <a href="#" class="btn btn-success">Comprar</a>
+                    </div>
+                </div>
+            </div><!--cerramos col-->
+           
+           
+            
+
+        </div><!--row-->
+
+    </div><!--container-fluid-->
+
+
+    <br>
+    <br>
+
+    <!-- <footer>
+        <div class="row col-12">
+            <div class="col-lg-2">
+                <img src=" {% static 'img/logos/logomascota.jpg' %}" alt="logoPerrito" width="60px">
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'inicio' %}" id="linkFooter"><strong>INICIO</strong></a>
+            </div>
+            <div class="col-lg-1">
+                <strong>Fundacion</strong>
+            </div>
+            <div class="col-lg-1">
+                <a href="{% url 'valida' %}" id="linkFooter"><strong>Formulario ayuda</strong></a>
+            </div>
+            <div class="col-lg-2">
+                <a href="https://www.fundacionanimal.cl/" id="linkFooter"><strong>Donar</strong></a>
+            </div>
+
+            <div class="col-lg-2">
+                <strong>Síguenos</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'img/logos/facebook (2).png' %}" alt="" width="30px" height="30px"style=" margin-left: 15px;" >
+                    <img src="{% static 'img/logos/twitter.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                    <img src="{% static 'img/logos/instagramblack.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <strong>Contacto</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'img/logos/ubicacion.png' %} " alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>Av. Esq. Blanca 501, Maipú</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'img/fono.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 10px;">
+                    <p>+56999118826</p>
+                    <img src="{% static 'img/fono.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 10px;">
+                    <p>+56987163669</p>
+                    <img src="{% static 'img/fono.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 10px;">
+                    <p>+56985444669</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'img/logos/correo.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 25px; margin-left: 10px;">
+                        <br>
+                    <p>est.vera@duocuc.cl</p>
+                    <img src="{% static 'img/logos/correo.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 25px; margin-left: 20px;">
+                        <br>
+                    <p>m.meza.vera@duocuc.cl</p>
+                    <img src="{% static 'img/logos/correo.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 25px; margin-left: 10px;">
+                    <p>max.veliz@duocuc.cl</p>
+                </div>
+                
+                <br><br><br>
+
+                <p>&copy; pet up - 2023</p>
+            </div>
+        </div>
+    </footer> -->
+
+
+
+    
+
+
+    
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>
+{%endblock%}

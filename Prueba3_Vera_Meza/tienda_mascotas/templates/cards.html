@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css '%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estiloTarjeta.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/centradorVideo.css'%}">
+    <link href="{% static 'css/estilos.css'%}" rel="stylesheet">
+    <title>fundacion</title>
+
+    <!-- api res mascotas -->
+    <script>
+        fetch ("https://dog.ceo/api/breeds/image/random")
+        .then(response => response.json())
+        .then (data => imgDog.src =data.message)
+    </script>
+</head>
+<body>
+    
+
+    <div class="tarjeta">
+        <div class="contenido">
+            <div class="ladoIzq">
+            <h2 class="titulo">Misión </h2>
+            <div class="cuerpo">
+            <p> Como grupo de amigas comprometidas por ayudar a los que lo neseciten llevamos a cabo 
+                este proyecto de una pagina web con finalidad de vender productos y también poder realizar donaciones.
+                De esta forma dar visilidad  combatir el problema de superpoblación y maltrato 
+                hacia los animales, entendiéndolo como un problema de salud y convivencia pública,
+                 promocionando las adopciones de animales rescatados y recuperados del abandono, 
+                 llevando adelante de forma sistemática campañas masivas de esterilización en perros 
+                 y gatos, como el único método estadísticamente comprobado, siendo a la vez eficiente,
+                  eficaz, ético y libre de crueldad, para hacerle frente a la sobrepoblación callejera.
+                   Fomentando un trabajo educativo que involucre a los ciudadanos  dentro de sus comunidades, 
+                   siendo éstas capaces de establecer vínculos y alianzas, con las distintas instituciones 
+                   dispuestas a  cooperar en la solución del problema, enmarcados siempre bajo estos principios rectores.</p>
+                  <a class="btn" href="https://fundacionanimal.cl/" target="_blank">Más info</a>
+                  
+            </div>
+         </div>
+         <div class="ladoDer">
+            <img id="imgDog">
+         </div>
+          </div>
+      </div>
+        
+
+      <div class="tarjeta">
+        <div class="contenido">
+            <div class="ladoIzq">
+            <h2 class="titulo">Visión </h2>
+            <div class="cuerpo">
+            <p> Convertirnos en una empresa sin fines de lucro que sea sustentable en el tiempo
+                ayudando a fundaciones de esta mima forma pretar ese apoyo a miles de macotas 
+                que al dia de hoy se encuentran sin un hogar permanente o que simplemente nesecitan 
+                de algun tratamiento medico.</p>
+                  <a class="btn" href="https://fundacionanimal.cl/" target="_blank">Más info</a>
+                  
+            </div>
+         </div>
+          <div class="ladoDer">
+             <img src="{% static 'img/terrierPata.jpg'%}" /></div>
+          </div>
+      </div>
+
+
+
+      
+       
+
+
+    <div>
+
+
+
+<div class="video-responsive"> 
+    <iframe  src="https://www.youtube.com/embed/-yjnc_EjRlk" 
+    frameborder="0" allowfullscreen="allowfullscreen"></iframe> </div>
+
+
+<!-- https://www.youtube.com/embed/-yjnc_EjRlk
+
+  
+<footer>
+    <div class="row col-12">
+        <div class="col-lg-2">
+            <img src=" {% static 'img/logos/logomascota.jpg' %}" alt="logoPerrito" width="60px">
+        </div>
+        <div class="col-lg-1">
+            <a href="{% url 'inicio' %}" id="linkFooter"><strong>INICIO</strong></a>
+        </div>
+        <div class="col-lg-1">
+            <strong>Fundacion</strong>
+        </div>
+        <div class="col-lg-1">
+            <a href="{% url 'valida' %}" id="linkFooter"><strong>Formulario ayuda</strong></a>
+        </div>
+        <div class="col-lg-2">
+            <a href="https://www.fundacionanimal.cl/" id="linkFooter"><strong>Donar</strong></a>
+        </div>
+
+        <div class="col-lg-2">
+            <strong>Síguenos</strong>
+            <br><br>
+            <div class="row">
+                <img src="{% static 'img/logos/facebook (2).png' %}" alt="" width="30px" height="30px"style=" margin-left: 15px;" >
+                <img src="{% static 'img/logos/twitter.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                <img src="{% static 'img/logos/instagramblack.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+            </div>
+        </div>
+
+
+        <div class="col-lg-3">
+
+            <strong>Contacto</strong>
+            <br><br>
+            <div class="row">
+                <img src="{% static 'img/logos/ubicacion.png' %} " alt="" width="20px" height="20px"
+                    style="margin-right: 10px; margin-left: 15px;">
+                <p>Av. Esq. Blanca 501, Maipú</p>
+            </div>
+            <div class="row">
+                <img src="{% static 'img/fono.png' %}" alt="" width="20px" height="20px"
+                    style="margin-right: 10px; margin-left: 15px;">
+                <p>+56999118826</p>
+                <img src="{% static 'img/fono.png' %}" alt="" width="20px" height="20px"
+                    style="margin-right: 10px; margin-left: 15px;">
+                <p>+56987163669</p>
+            </div>
+            <div class="row">
+                <img src="{% static 'img/logos/correo.png' %}" alt="" width="20px" height="20px"
+                    style="margin-right: 10px; margin-left: 15px;">
+                <p>est.vera@duocuc.cl</p>
+                <img src="{% static 'img/logos/correo.png' %}" alt="" width="20px" height="20px"
+                    style="margin-right: 10px; margin-left: 15px;">
+                <p>max.veliz@duocuc.cl</p>
+            </div>
+            <br><br><br>
+
+            <p>&copy; pet up - 2023</p>
+        </div>
+    </div>
+</footer> -->
+
+</body>
+</html>
+{% endblock %}

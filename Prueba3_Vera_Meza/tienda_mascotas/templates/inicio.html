@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+
+    <title>Inicio</title>
+    
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+
+        
+        }
+
+        /*{
+        border: solid red;    
+        }*/
+        
+    </style>
+
+</head>
+<body>
+
+    
+
+ <!--termino menu-->
+
+
+    <!--carrusel-->
+  <main role="main" class="container">
+        <div id="carousel1" class="carousel slide " data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel1" data-slide-to="0" active></li>   <!--active activa el caruusel de fotos -->
+                <li data-target="#carousel1" data-slide-to="1" active></li>
+                <li data-target="#carousel1" data-slide-to="2" active></li>
+
+            </ol>
+
+            <!--configuramos las imagenes que se delizan -->
+
+            <div class="carousel-inner">
+
+                <!--posiscion 0-->
+
+                <div class="carousel-item active">
+                    <img src="{% static 'img/altaResolucio/amigosMascotas.jpg' %}" class="d-block w-100" style="width:300px;height:500px;">
+                    <div class="carousel-caption">
+                        <h3> ¿Buscas productos para el regalon de la casa?</h3>
+                        <p> Encuentar los mejores productos para tu mascota"</p>
+
+                    </div>
+                </div>
+
+
+                <!--configuramos la segunda ubicacion y la tercera-->
+
+                <div class="carousel-item">
+                    <img src="{% static 'img/altaResolucio/golden.jpg' %}" class="d-block w-100" style="width:300px;height:550px;">
+                    <div class="carousel-caption">
+                        <h3> ¿Buscas productos para el regalon de la casa?</h3>
+                        <p> Encuentar los mejores productos para tu mascota"</p>
+
+                    </div> 
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'img/altaResolucio/pantera2.jpg' %}" class="d-block w-100" style="width:300px;height:550px;">
+                    <div class="carousel-caption">
+                        <h3> ¿Buscas productos para el regalon de la casa?</h3>
+                        <p> Encuentar los mejores productos para tu mascota"</p>
+                    </div> 
+            </div> <!--cierra carrusel inner -->
+
+            <!--codificamos avanzar y retroceder -->
+            <a href="#carousel1" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">previous </span>
+
+            </a>
+
+            <a href="#carousel1" class="carousel-control-next" data-slide="next" >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">next  </span>
+                <span class="color"> </span>
+
+            </a>
+
+
+        </div>
+
+        </main> 
+
+    
+<div class="container-fluid">
+    <div class="row" >
+        <div class="col-md">
+            <div class="card">
+            
+                <div class="card-body">
+                    <h4 class="card-title">¿Buscas productos para tu perro?</h4>
+                    <p class="card-text">
+                        Todo lo que nesecitas para el regalon de hogar! 
+                       <br>
+                       <br>
+                    </p>
+                    <a href="{% url 'venta' %}" class="btn btn-primary">   Ir   </a>
+                    <img class="card-img-top" src="{% static 'img/perritoTieno1.jpg' %}">
+                
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md">
+            <div class="card" >
+                <div class="card-body">
+                    <h4 class="card-title">¿Buscas productos para tu gato?</h4>
+                    <p class="card-text">
+                       Presionando botón ir prodrás encontrar los mejores productos para tu mascota 
+                    </p>
+                    <a href="{% url 'venta' %}" class="btn btn-primary">  Ir  </a>
+                    <img class="card-img-top" src="{% static 'img/gatito1.jpg' %}">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">¿Buscas los mejores alimentos?</h4>
+                    <p class="card-text">
+                        Presionando botón ir prodrás encontrar los mejores productos para tu mascota 
+                    </p>
+                    <a href="{% url 'alimentos' %}" class="btn btn-primary">  Ir  </a>
+                    <img class="card-img-top" src="{% static 'img/alimentosVarios1.jpg' %}" >
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div> 
+<br>
+    <br>
+<!--termino de tarjetas -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+{%endblock%}

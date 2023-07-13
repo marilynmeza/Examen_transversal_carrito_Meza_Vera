@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrando Productos</title>
+    {% load static %}
+</head>
+<body>
+    <div class="container">
+        <h2>Productos disponibles</h2>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-8">
+                <div class="row" style="padding: 5px 0;">
+                    <div class="col-12">
+                        <div class="row">
+            <!-- podemos tener 12 GRID(NOS PERMITE MAQUETEAR HTML) POR FILA  -->
+        <!-- queremos que nos muestre 3 tarjetas y cada tarejta ocupe 4 grids  -->
+        
+         <!-- NECESITAMOS QUE REALICE UN CICLO PARA QUE VAYA INGRESANDO LAS
+            IMAGENES POR FILA -->
+                        {% for producto in productitos %}  <!-- instanciamos un producto (seria como un X que recorre) recorre nuestro diccionario que es 
+            la palabra en rojo en cremillas simples que definimos en nuestro views metodo mostrar-->
+                        <div class="col-6">
+                         <!-- creamos una tarjeta a continuacion -->
+                            <div class="card text-center">
+                <!-- PARA QUE IMAGEN SE CARGUE EN LA PARTE SUPERIOR -->
+               <!-- preguntar haciendo un IF
+            llamamos al objeto creado en el for que es palabra producto 
+        e instanciampos con punto y buscamos una imagen -->
+                                {% if producto.imagen %}
+
+                                 <!-- traemos el objeto imagen desde nuestra clase producto pero com o URL -->
+                                <img src="{{ producto.imagen.url }}" class="card-img-top mx-auto">
+                                <br>
+                                <br>
+                                 {% else %}
+
+                                <img src="{% static 'img/producto-sin-imagen.png' %}" class="card-img-top mx-auto">
+
+                                {% endif %}
+
+                                <div class="card-body">
+                                    <h5 class="card-title">  Producto : {{ producto.idProducto }}
+                                    </h5>
+                                    <p class="card-text">
+                                        Marca:  {{ producto.marca}} <br>
+                                        Precio: {{ producto.precioProducto}}
+
+                                    </p>
+                                    
+                                    <a href="{% url 'agregar' producto.idProducto %}" class="btn btn-outline-success">Agregar al carro</a>
+                                </div>
+
+
+                             </div>
+
+                            </div>
+                        {% endfor %}   <!-- cerramos donde cerramos las propiedades-->
+    
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                {% include "carrito.html" %}
+            </div>
+        </div>
+</body>
+</html>
+{% endblock %}

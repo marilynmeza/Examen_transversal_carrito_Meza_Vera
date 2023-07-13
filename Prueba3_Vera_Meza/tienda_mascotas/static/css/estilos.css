@@ -1,0 +1,86 @@
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input{
+    float:left;
+    margin-bottom: 10px;
+}
+
+label{
+    clear: both;
+    float:left;
+    width: 150px;
+}
+
+#enviar{
+    clear: both;
+    float:left;
+    width: 150px;
+}
+
+#limpiar{
+    float:left;
+    width: 150px;
+    margin-left: 15px;
+
+}
+.error-control{
+    border: 1px solid red;
+}
+label.error{
+    color:red;
+    width: 250px;
+    font-size: 0.8em;
+    margin-top:-5px;
+    margin-bottom: 10px;
+}
+
+body{
+    background-color: rgb(193, 199, 175);
+}
+
+
+
+.estiloSec {
+    width: 500px;
+    background:#24303c;
+    padding: 5px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color:gray;
+    box-shadow: 7px 13px 37px #000;}
+
+
+.form-group{
+    width: 400px;
+    background:#24303c;
+    padding: 5px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color:white;
+    box-shadow: 7px 13px 37px #000;}
+
+
+.form-control{
+
+background:#24303c;
+
+
+font-family: 'calibri';
+color:white;
+box-shadow: 7px 13px 37px #000;}
+
+
+.footer {
+    color: aqua;
+    background: #333;
+    }
+
+
+
